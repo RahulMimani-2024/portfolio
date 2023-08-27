@@ -49,7 +49,8 @@ const formData = {
   description: "",
 };
 const Index = () => {
-  useEffect(() => emailjs.init(process.env.PUBLIC_KEY), []);
+  console.log(process.env.REACT_APP_PUBLIC_KEY);
+  useEffect(() => emailjs.init(process.env.REACT_APP_PUBLIC_KEY), []);
   const [wheelLoader, setWheelLoader] = useState(false);
   const [form, setForm] = useState(formData);
   const [submitted, setSubmitted] = useState(false);
