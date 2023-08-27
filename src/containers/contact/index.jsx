@@ -49,7 +49,6 @@ const formData = {
   description: "",
 };
 const Index = () => {
-  console.log(process.env.REACT_APP_PUBLIC_KEY);
   useEffect(() => emailjs.init(process.env.REACT_APP_PUBLIC_KEY), []);
   const [wheelLoader, setWheelLoader] = useState(false);
   const [form, setForm] = useState(formData);
@@ -57,8 +56,8 @@ const Index = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setWheelLoader(true);
-    const serviceId = process.env.SERVICE_ID;
-    const templateId = process.env.TEMPLATE_ID;
+    const serviceId = process.env.REACT_APP_SERVICE_ID;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID;
     console.log(form);
     try {
       await emailjs.send(serviceId, templateId, {
