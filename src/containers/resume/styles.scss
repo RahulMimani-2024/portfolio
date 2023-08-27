@@ -1,0 +1,95 @@
+.resume {
+  height: 100%;
+}
+
+.timeline {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  &__experience,
+  &__education {
+    width: 50%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header-text {
+      display: inline-block;
+      color: var(--green-theme-sub-text-color);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 2px solid var(--green-theme-main-color);
+    }
+    &__header-text::before,
+    &__header-text::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 5px;
+      background-color: var(--green-theme-main-color);
+      bottom: -1px;
+    }
+
+    &__header-text::before {
+      left: 0;
+    }
+    &__header-text::after {
+      right: 0;
+    }
+    &__vertical-timeline-element {
+      padding: 0px 0px 30px 0px;
+      &:last-child {
+        padding-bottom: 0px;
+      }
+    }
+    .vertical-timeline-element-title-wrapper {
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      h3,
+      h4 {
+        font-size: 16px;
+      }
+      h4 {
+        margin-left: 8px;
+      }
+      p {
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+    }
+    .vertical-timeline-element-content {
+      box-shadow: none;
+    }
+    .vertical-timeline-element-title-wrapper-description {
+      text-transform: capitalize;
+      font-size: 18px;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      overflow-y: auto;
+    }
+    .vertical-timeline-element-date {
+      opacity: 1 !important;
+      font-size: 18px !important;
+      color: var(--green-theme-sub-text-color) !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    &__experience,
+    &__education {
+      width: 100%;
+      gap: 2rem;
+    }
+  }
+}

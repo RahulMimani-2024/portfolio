@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');
+
+:root{
+    --green-theme-background-color : black;
+    --green-theme-main-color :rgb(255,69,0);
+    --green-theme-sub-text-color : #ffffff;
+    --green-theme-nav-background-color : black;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    background: var(--green-theme-background-color);
+    height: 100%;
+}
+
+#root{
+    height: 100%;
+}

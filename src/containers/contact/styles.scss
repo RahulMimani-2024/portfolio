@@ -1,0 +1,110 @@
+.contact {
+  &__content {
+    padding: 20px;
+    &__header-text {
+      color: var(--green-theme-sub-text-color);
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 2px solid var(--green-theme-main-color);
+    }
+    &__header-text::before,
+    &__header-text::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 5px;
+      background-color: var(--green-theme-main-color);
+      bottom: -1px;
+    }
+    &__header-text::before {
+      left: 0;
+    }
+    &__header-text::after {
+      right: 0;
+    }
+    &__form {
+      margin-top: 30px;
+      &__controlswrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 2px solid var(--green-theme-main-color);
+            padding: 16px 12px;
+            transition: all 0.5 ease;
+            position: relative;
+            background-color: transparent;
+            color: var(--green-theme-sub-text-color);
+          }
+
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-weight: 500;
+            position: absolute;
+            top: 15px;
+            left: 12px;
+            transition: all 0.2s ease;
+            color: var(--green-theme-sub-text-color);
+            font-size: 16px;
+          }
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: none;
+          }
+
+          .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel,
+          .inputEmail:focus + .emailLabel,
+          .inputEmail:valid + .emailLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      padding: 10px 70px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--green-theme-main-color);
+      border: 1.5px solid var(--green-theme-main-color);
+      border-radius: 4px;
+      font-weight: 600;
+      &:hover {
+        color: black;
+        background-color: var(--green-theme-main-color);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact__content__form {
+    text-align: center;
+
+    &__controlswrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.css-dsjx2w{
+  height : 100% !important;
+  margin-top: 40px;
+}
