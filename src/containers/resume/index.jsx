@@ -70,7 +70,7 @@ const Index = () => {
                     color: "var(--green-theme-sub-text-color)",
                     border: "1.5px solid var(--green-theme-main-color)",
                   }}
-                  date="2020 - Present"
+                  date={item.date}
                   icon={<MdWork></MdWork>}
                   iconStyle={{
                     background: "#181818",

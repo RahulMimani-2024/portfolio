@@ -23,7 +23,8 @@ export const data = {
         {
             title : "Senior Secondary CBSE",
             subtitle : "Intermediate",
-            desciption : "passed with 95.2% marks in PCM stream"
+            desciption : "passed with 95.2% marks in PCM stream",
+            date : "2019-2020"
         },
     ]
 }

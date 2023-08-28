@@ -63,6 +63,7 @@ const Index = () => {
       await emailjs.send(serviceId, templateId, {
         from_name: form.name,
         message: form.description,
+        email : form.email
       });
     } catch (e) {
       alert(e.message);
