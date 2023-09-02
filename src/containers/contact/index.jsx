@@ -57,13 +57,17 @@ const Index = () => {
     e.preventDefault();
     setWheelLoader(true);
     const serviceId = process.env.REACT_APP_SERVICE_ID;
-    const templateId = process.env.REACT_APP_TEMPLATE_ID;
+    const templateId = process.env.REACT_APP_TEMPLATE_ID_CONTACT;
     console.log(form);
     try {
       await emailjs.send(serviceId, templateId, {
         from_name: form.name,
         message: form.description,
-        email : form.email
+        email: form.email,
+        subject: "contacts@portfolio.com",
+        service_email: "contacts@portfolio.com",
+        text_link: "portfolio",
+        link: "https://rahul-mimani.netlify.app",
       });
     } catch (e) {
       alert(e.message);
