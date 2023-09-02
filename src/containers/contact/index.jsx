@@ -61,7 +61,7 @@ const Index = () => {
     console.log(form);
     try {
       await emailjs.send(serviceId, templateId, {
-        from_name: form.name,
+        name: form.name,
         message: form.description,
         email: form.email,
         subject: "contacts@portfolio.com",
